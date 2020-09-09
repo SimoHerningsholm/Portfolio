@@ -1,45 +1,131 @@
 #navLogo {
+	font-size:30px;
+	font-weight:bold;
+	color:#9A9DA0;
 }
 #navLinks {
 	width:100%;
 	display:flex;
+	font-size:20px;
 	justify-content: flex-end;
+	padding-right:10px;
 }
-
 #pageWrapper {
     margin-top: 55px;
+	position: relative;
+	min-height: 95vh;
+	background-image: url(../Billeder/bgPic01.png);
+	background-repeat: repeat;
+}
+.nav-link{
+    cursor: pointer;
 }
 #pageHeader {
-	height:100px;
+	height:150px;
 	background-image: url(../Billeder/banner.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 #pageMainContent {
-	/*background-color:green;*/
 }
 .contentHeaders {
 	font-weight:bold;
 	margin-top:15px;
-	padding-top:5px;
-	padding-bottom:5px;
-	padding-left:5px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:10px;
 	background-color:#5c6770;
+	border-radius: 5px 5px 0px 0px;
+}
+.dynaContentHeaders {
+	font-weight:bold;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:10px;
+	background-color:#5c6770;
+	border-radius: 5px 5px 0px 0px;
 }
 .contentArticles {
-	margin-bottom:15px;
-	padding-top:5px;
-	padding-bottom:5px;
-	padding-left:5px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:10px;
+	padding-right:10px;
 	background-color:#c7cdd1;
+	min-height:100px;
+	border-radius: 0px 0px 5px 5px;
 }
 #pageAsideContent {
-	/*background-color:purple;*/
+	
+}
+
+#loggedInMenuWrapper {
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+	width:100%;
+}
+.loginMenuBtn {
+	width:80%;
+	display:block;
+	font-weight:bold;
+	margin-top:5px;
+	margin-bottom:5px;
+	
 }
 #pageFooter {
 	text-align:center;
 	background-color:#343A40;
-	color:white;
-	padding-top:5px;
-	padding-bottom:5px;
+	color:#9A9DA0;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+#DynamiskContentOuterWrapper
+{
+	background-color:rgba(255,255,255,0.8);
+	position:absolute;
+	z-index:1;
+	width:100%;
+	height:95vh;
+	display:flex;
+	flex-direction:column;
+}
+#dynaFlexRow01 {
+	display: flex;
+	flex-direction: row;
+	width:100%;
+}
+#dynaFlexRow02 {
+	display: flex;
+	flex-direction: row;
+	width:100%;
+}
+#dynaFlexRow03 {
+	display: flex;
+	flex-direction: row;
+	width:100%;
+	flex-grow : 1;
+}
+#flexSpaceHeader {
+	width:100%;
+	height:50px;
+}
+#flexContPrime {
+	width:50%;
+}
+.flexSpaceConts {
+	width:25%;
+}
+#flexSpaceFooter {
+	width:100%;
+}
+.exitSpan {
+	background-color:#5c6770;
+	float:right;
+	padding-left:5px;
+	padding-right:5px;
+	margin-right:10px;
+	cursor: pointer;
+}
+.btns {
+	color:black;
 }

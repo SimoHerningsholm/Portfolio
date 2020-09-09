@@ -1,0 +1,64 @@
+CREATE TABLE Postnummer (
+	Postnummer char(4),
+	Bynavn varchar(255),
+	PRIMARY KEY (Postnummer)
+);
+CREATE TABLE Profil (
+	Id int AUTO_INCREMENT,
+	Fornavn varchar(255),
+	Efternavn varchar(255),
+	Email varchar(255),
+	Telefon char(8),
+	Postnummer char(4),
+	PRIMARY KEY (Id),
+	FOREIGN KEY (Postnummer) REFERENCES Postnummer(Postnummer)
+);
+CREATE TABLE Bruger (
+	Id int AUTO_INCREMENT,
+	ProfilId int,
+	Brugernavn varchar(255),
+	Password varchar(255),
+	Opretdato datetime,
+	PRIMARY KEY (Id),
+	FOREIGN KEY (ProfilId) REFERENCES Profil(Id)
+);
+CREATE TABLE Logins (
+	Id int AUTO_INCREMENT,
+	BrugerId int,
+	ForsøgStatus tinyint(1),
+	Tid datetime,
+	PRIMARY KEY (Id),
+	FOREIGN KEY (BrugerId) REFERENCES Bruger(Id)
+);
+CREATE TABLE gbbeskeder (
+	Id int AUTO_INCREMENT,
+	BrugerId int,
+	Emne varchar(50),
+	Besked varchar(500),
+	Tid datetime,
+	PRIMARY KEY (Id),
+	FOREIGN KEY (BrugerId) REFERENCES Bruger(Id)
+)
+
+Analyse:
+
+Hvad skal brugeren kunne?
+
+Brugeren skal kunne oprette en bruger med tilhørende profil
+Brugeren skal kunne redigere i sin profil
+Brugeren skal kunne skrive i gæstebog
+Brugeren skal kunne votere sin favorit lama.
+
+Hvilke data skal registreres for bruger
+Brugernavn
+Password
+Email
+Fornavn
+Efternavn
+Email
+Telefon
+Postnummer
+Opretdato
+
+
+

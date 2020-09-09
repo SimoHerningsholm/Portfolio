@@ -1,0 +1,15 @@
+brugere:
+Id
+navn
+email
+telefon
+postnr
+brugernavn
+
+postnr:
+postnr
+bynavn
+
+login
+brugernavn
+password
